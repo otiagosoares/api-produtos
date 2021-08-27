@@ -12,11 +12,11 @@ import com.produtos.api.repositories.CategoriaRepository;
 public class CategoriaService {
 	
 	@Autowired
-	private CategoriaRepository repository;
+	private CategoriaRepository repo;
 	
 	public Categoria find(Integer id) {
 		
-		Optional<Categoria> obj = repository.findById(id);
+		Optional<Categoria> obj = repo.findById(id);
 		return obj.orElse(null);
 	}
 
